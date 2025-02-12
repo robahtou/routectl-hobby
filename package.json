@@ -3,20 +3,36 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "start": "next dev --turbo",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "next": "15.1.7"
+    "build:start": "next start",
+    "lint": "next lint",
+    "repack": "del -f .next node_modules package-lock.json pnpm-lock.yaml && pnpm install",
+    "generate": "tsx autogenerate/generate.ts routes.oas_v1.json",
+    "undogenerate": "tsx zUndoGenerate.ts",
+    "routectl": "tsx routectl/index.ts",
+    "test": "tsx --test",
+    "remove-methods": "tsx zRemoveMethos.ts"
   },
   "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19"
+    "@types/json-schema": "7.0.15",
+    "@types/node": "22.13.1",
+    "@types/react": "19.0.8",
+    "@types/react-dom": "19.0.3",
+    "del-cli": "6.0.0",
+    "tsx": "4.19.2",
+    "typescript": "5.7.3"
+  },
+  "dependencies": {
+    "ajv": "8.17.1",
+    "ajv-formats": "3.0.1",
+    "commander": "13.1.0",
+    "inquirer": "12.4.1",
+    "next": "15.1.7",
+    "oas": "25.3.0",
+    "oas-normalize": "12.1.0",
+    "postgres": "3.4.5",
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
   }
 }

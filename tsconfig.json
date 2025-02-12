@@ -19,9 +19,17 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
-    }
+      "@/*": ["./src/*"],
+      "autogenerate/*": ["./autogenerate/*"]
+    },
+    "baseUrl": "."
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "autogenerate/**/*.ts"
+  ],
   "exclude": ["node_modules"]
 }

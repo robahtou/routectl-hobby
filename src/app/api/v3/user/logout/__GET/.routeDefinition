@@ -1,0 +1,13 @@
+{
+  "tags": [
+    "user"
+  ],
+  "summary": "Logs out current logged in user session",
+  "description": "",
+  "operationId": "logoutUser",
+  "responses": {
+    "default": {
+      "description": "successful operation"
+    }
+  }
+}
