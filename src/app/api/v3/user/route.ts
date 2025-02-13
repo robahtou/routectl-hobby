@@ -1,1 +1,1 @@
-export { default as POST } from './__POST';
+export { default as POST } from './_post';
